@@ -4,8 +4,6 @@ ENV HOME /bitcoin
 
 ENV BITCOIN_VERSION 0.16.0
 
-RUN groupadd -g 1000 bitcoin && useradd -u 1000 -g bitcoin -s /bin/bash -m -d /bitcoin bitcoin
-
 RUN apt-get update -y \
   && apt-get install -y curl unzip procps \
   && apt-get clean \
